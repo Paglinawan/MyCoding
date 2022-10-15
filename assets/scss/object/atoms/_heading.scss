@@ -1,0 +1,15 @@
+@use "../../foundation/_mixin.scss" as mixin;
+
+.heading{
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+  @include mixin.mq-up{
+    margin-bottom: var(--space-md);
+    font-size: 2.4rem;
+  }
+  @include mixin.mq-down{
+    margin-bottom: var(--space-md-sm);
+    font-size: 1.8rem;
+  }
+}

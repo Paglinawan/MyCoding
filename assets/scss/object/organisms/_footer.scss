@@ -1,0 +1,33 @@
+@use "../../foundation/_mixin.scss" as mixin;
+
+.footer{
+  background: var(--bg-Gray);
+  @include mixin.mq-up{
+    padding: var(--space-lg) 0;
+  }
+  @include mixin.mq-down{
+    padding: var(--space-lg-sm) 0;
+  }
+}
+.footer__top{
+  @include mixin.mq-up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+  @include mixin.mq-down{
+  }
+}
+.fnav__list{
+  @include mixin.mq-up{
+    display: flex;
+    align-items: center;
+  }
+}
+.fnav__item{
+  @include mixin.mq-up{
+    & + &{
+      margin-left: 2rem;
+    }
+  }
+}

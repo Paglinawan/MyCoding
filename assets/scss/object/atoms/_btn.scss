@@ -1,0 +1,12 @@
+@use "../../foundation/_mixin.scss" as mixin;
+
+.btn{
+  display: inline-block;
+  width: 32rem;
+  padding: 1em 2em;
+  border-radius: 9999px;
+  background: var(--line-Gray);
+  text-align: center;
+  line-height: 1;
+  font-weight: 700;
+}

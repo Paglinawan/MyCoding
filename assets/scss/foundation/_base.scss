@@ -1,0 +1,23 @@
+@use "../foundation/_mixin.scss" as mixin;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size  : 1.4rem;
+  background : #fff;
+  color      : var(--font-en);
+  overflow-x : hidden;
+  line-height: 1.8;
+  letter-spacing: 0.15em;
+}
+
+@include mixin.mq-up {
+  a[href^="tel:"] {
+    pointer-events: none;
+    cursor        : text;
+  }
+}

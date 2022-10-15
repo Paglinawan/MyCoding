@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use "../../foundation/_variables.scss";
+@use "../../foundation/_mixin.scss" as mixin;
+
+@forward "../../foundation/_reset.scss";
+@forward "../../foundation/_base.scss";
+@forward "../../foundation/_layout.scss";
+@forward "../../foundation/_utility.scss";
+
+/*-------------------------------
+- Common
+-------------------------------*/
+@forward "../../object/organisms/_header.scss";
+@forward "../../object/organisms/_ham.scss";
+@forward "../../object/organisms/_footer.scss";
+
+/*-------------------------------
+- Section
+-------------------------------*/
+@forward "../../object/molecules/_sec.scss";
+@forward "../../object/atoms/_btn.scss";
+@forward "../../object/atoms/_heading.scss";
+

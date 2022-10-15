@@ -1,0 +1,28 @@
+@use "../foundation/_mixin.scss" as mixin;
+
+.visible {
+  @include mixin.mq-up(md) {
+    &-md,&-sm {
+      display: none;
+    }
+    &-lg {
+      display: inherit;
+    }
+  }
+  @include mixin.mq-between {
+    &-lg,&-sm {
+      display: none;
+    }
+    &-md {
+      display: inherit;
+    }
+  }
+  @include mixin.mq-down {
+    &-lg,&-md {
+      display: none;
+    }
+    &-sm {
+      display: inherit;
+    }
+  }
+}
