@@ -1,47 +1,17 @@
 // --- Media Query ---
-$breakpoint-up: (
-  'xs': 'screen and (min-width: 540px)',
-  'sm': 'screen and (min-width: 750px)',
-  'md': 'screen and (min-width: 1000px)',
-  'lg': 'screen and (min-width: 1200px)',
-  'xl': 'screen and (min-width: 1400px)',
-) !default;
-
-$breakpoint-down: (
-  'xs': 'screen and (max-width: 539px)',
-  'sm': 'screen and (max-width: 749px)',
-  'md': 'screen and (max-width: 999px)',
-  'lg': 'screen and (max-width: 1199px)',
-  'xl': 'screen and (max-width: 1399px)',
-) !default;
-
-$breakpoint-between: (
-  'sm-md': 'screen and (min-width: 750px) and (max-width: 999px)',
-  'sm-lg': 'screen and (min-width: 750px) and (max-width: 1199px)',
-  'sm-xl': 'screen and (min-width: 750px) and (max-width: 1399px)',
-  'md-lg': 'screen and (min-width: 1000px) and (max-width: 1199px)',
-  'md-xl': 'screen and (min-width: 1000px) and (max-width: 1399px)',
-) !default;
-
-@mixin mq-up($breakpoint: sm) {
-  @media #{map-get($breakpoint-up, $breakpoint)} {
-    @content;
+@mixin pc {
+  @media screen and (min-width: 750px) {
+      @content;
   }
 }
-@mixin mq-down($breakpoint: sm) {
-  @media #{map-get($breakpoint-down, $breakpoint)} {
-    @content;
+@mixin tab {
+  @media screen and (min-width: 750px) and (max-width: 1023px){
+      @content;
   }
 }
-@mixin mq-between($breakpoint: sm-md) {
-  @media #{map-get($breakpoint-between, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($bp) {
-  @media #{map-get($breakpoint, $bp)} {
-   @content;
+@mixin sp {
+  @media screen and (max-width: 749px) {
+      @content;
   }
 }
 

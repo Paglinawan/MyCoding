@@ -1,0 +1,9 @@
+@use "../../foundation/_mixin.scss" as mixin;
+.fadeIn{
+  opacity: 0;
+  &.js-scroll{
+    &.is-active{
+      animation: fadeIn 1s linear forwards;
+    }
+  }
+}

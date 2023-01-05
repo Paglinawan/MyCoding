@@ -1,57 +1,58 @@
-@use "../../foundation/_mixin.scss"as mixin;
+@use "../../foundation/_mixin.scss" as mixin;
 
-/*-------------------------------
+/**------------------------
 - variables
--------------------------------*/
-html {
-  --ham-width        : 32px;
-  --ham-height       : 2px;
-  --ham-spacing      : 8px;
-  --ham-color        : var(--txt-Black);
-  --ham-border-radius: 4px;
+*------------------------*/
+.ham {
+  --ham-w: 3.2rem;
+  --ham-h: 0.2rem;
+  --ham-space: 0.8rem;
+  --ham-clr-dflt: var(--txt-Black);
+  --ham-clr-active: white;
+  --ham-radius: 0.4rem;
   --ham-hover-opacity: 0.7;
-  --ham-active-color : white;
 }
 
-/*-------------------------------
+/**------------------------
 - ham
--------------------------------*/
+*------------------------*/
 .ham {
-  position  : relative;
-  z-index   : 100;
-  display   : inline-block;
-  cursor    : pointer;
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  cursor: pointer;
   transition: all .3s;
 
   &.is-active {
+
     .ham-inner,
     .ham-inner::before,
     .ham-inner::after {
-      background-color: var(--ham-active-color);
+      background-color: var(--ham-clr-active);
     }
   }
 }
 
 .ham-box {
-  width   : var(--ham-width);
-  height  : calc(var(--ham-height) * 3 + var(--ham-spacing) * 2);
-  display : inline-block;
+  width: var(--ham-w);
+  height: calc(var(--ham-h) * 3 + var(--ham-space) * 2);
+  display: inline-block;
   position: relative;
 }
 
 .ham-inner {
   display: block;
-  top    : 50%;
+  top: 50%;
 
   &,
   &::before,
   &::after {
-    width           : var(--ham-width);
-    height          : var(--ham-height);
-    background-color: var(--ham-color);
-    border-radius   : var(--ham-border-radius);
-    position        : absolute;
-    transition      : all .3s;
+    width: var(--ham-w);
+    height: var(--ham-h);
+    background-color: var(--ham-clr-dflt);
+    border-radius: var(--ham-radius);
+    position: absolute;
+    transition: all .3s;
   }
 
   &::before,
@@ -61,11 +62,11 @@ html {
   }
 
   &::before {
-    top: calc((var(--ham-spacing) + var(--ham-height)) * -1);
+    top: calc((var(--ham-space) + var(--ham-h)) * -1);
   }
 
   &::after {
-    bottom: calc((var(--ham-spacing) + var(--ham-height)) * -1);
+    bottom: calc((var(--ham-space) + var(--ham-h)) * -1);
   }
 }
 
@@ -75,7 +76,7 @@ html {
 */
 .ham--3dy {
   .ham-box {
-    perspective: calc(var(--ham-width) * 2);
+    perspective: calc(var(--ham-w) * 2);
   }
 
   .ham-inner {
@@ -91,43 +92,43 @@ html {
   &.is-active {
     .ham-inner {
       background-color: transparent !important;
-      transform       : rotateX(-180deg);
+      transform: rotateX(-180deg);
 
       &::before {
-        transform: translate3d(0, calc(var(--ham-height) + var(--ham-spacing)), 0) rotate(45deg);
+        transform: translate3d(0, calc(var(--ham-h) + var(--ham-space)), 0) rotate(45deg);
       }
 
       &::after {
-        transform: translate3d(0, calc((var(--ham-height) + var(--ham-spacing)) * -1), 0) rotate(-45deg);
+        transform: translate3d(0, calc((var(--ham-h) + var(--ham-space)) * -1), 0) rotate(-45deg);
       }
     }
   }
 }
 
-/*-------------------------------
+/**------------------------
 - hamArea
--------------------------------*/
+*------------------------*/
 .hamArea {
   visibility: hidden;
-  opacity   : 0;
+  opacity: 0;
 
-  position    : fixed;
-  top         : 0;
-  left        : 0;
-  z-index     : 50;
-  display     : flex;
-  align-items : center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
   justify-self: center;
-  background  : rgba(0, 0, 0, 0.7);
-  color       : #fff;
-  width       : 100vw;
-  height      : 100vh;
-  padding     : 20px;
-  transition  : all .3s;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  transition: all .3s;
   text-align: center;
 
   body.is-active & {
     visibility: initial;
-    opacity   : 1;
+    opacity: 1;
   }
 }

@@ -1,21 +1,15 @@
 @use "../foundation/_mixin.scss" as mixin;
 
 [class*=l-inner-]{
-  @include mixin.mq-up {
+  @include mixin.pc {
     width: 90%;
     margin: 0 auto;
   }
-  @include mixin.mq-down {
+  @include mixin.sp {
     padding:0 2rem;
   }
 }
 .l-inner {
-  &-xl{
-    max-width: 1400px;
-  }
-  &-lg{
-    max-width: 1200px;
-  }
   &-md{
     max-width: 1000px;
   }

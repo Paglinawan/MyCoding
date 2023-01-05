@@ -1,0 +1,51 @@
+
+@use "../../foundation/_mixin.scss" as mixin;
+@include mixin.keyframes(fadeIn){
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@include mixin.keyframes(fadeInB){
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@include mixin.keyframes(fadeInL){
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@include mixin.keyframes(slideWidth){
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+@include mixin.keyframes(slideOut){
+  0%{
+    width: 0;
+    left: 0;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+    right: 0;
+  }
+}

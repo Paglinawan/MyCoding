@@ -7,17 +7,35 @@
 @forward "../../foundation/_layout.scss";
 @forward "../../foundation/_utility.scss";
 
-/*-------------------------------
-- Common
--------------------------------*/
+/*========================
+- Atoms
+========================*/
+
+/*========================
+- Molecules
+========================*/
+
+/*========================
+- Organisms
+========================*/
+
+/**------------------------
+- common
+*------------------------*/
+@forward "../../object/organisms/_footer.scss";
 @forward "../../object/organisms/_header.scss";
 @forward "../../object/organisms/_ham.scss";
-@forward "../../object/organisms/_footer.scss";
 
-/*-------------------------------
-- Section
--------------------------------*/
-@forward "../../object/molecules/_sec.scss";
-@forward "../../object/atoms/_btn.scss";
-@forward "../../object/atoms/_heading.scss";
+/**------------------------
+- animation
+*------------------------*/
+@forward "../../object/molecules/_animation.scss";
+@forward "../../object/atoms/_fadeIn.scss";
 
+/*========================
+- Templates
+========================*/
+
+/*========================
+- Page
+========================*/

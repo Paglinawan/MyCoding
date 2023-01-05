@@ -1,34 +1,27 @@
 @use "../../foundation/_mixin.scss" as mixin;
 
-.header{
-  @include mixin.mq-up{
-    padding: 2rem 0;
+.hd{
+  @include mixin.pc{
+    height: 8rem;
+    padding: 2.4rem 0 0 0;
   }
-  @include mixin.mq-down{
-    padding: 1.5rem 0;
+  @include mixin.sp{
+    height: 6.4rem;
+    padding: 1.6rem 0 0 0;
   }
 }
-.header__inner{
+.hd__inr{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include mixin.mq-up{
-    padding:0 2rem;
+  @include mixin.pc{
+    padding: 0 clamp(2rem,4rem,4vw);
   }
-  @include mixin.mq-down{
-    padding:0 1.5rem;
-  }
-}
-.gnav__list{
-  @include mixin.mq-up{
-    display: flex;
-    align-items: center;
+  @include mixin.sp{
+    padding: 0 1.5rem;
   }
 }
-.gnav__item{
-  @include mixin.mq-up{
-    & + &{
-      margin-left: 2rem;
-    }
-  }
+.hd__logo{
+  width: 24rem;
+  max-width: 30vw;
 }
